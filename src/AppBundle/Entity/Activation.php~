@@ -1,0 +1,51 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: simon
+ * Date: 2/5/16
+ * Time: 9:42 PM
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="activation")
+ */
+class Activation
+{
+    /**
+     * @ORM\Column(type="id")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="datetimetz")
+     */
+    protected $startDate;
+
+    /**
+     * @ORM\Column(type="datetimetz")
+     */
+    protected $endDate;
+
+    /**
+     * @ORM\Column(type="string", length=1000)
+     */
+    protected $objective;
+
+    /**
+     * @ORM\Column(type="string", length=1000)
+     */
+    protected $mission;
+
+}
